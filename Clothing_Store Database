@@ -1,3 +1,9 @@
+Jessica Kim's SQL Portfolio
+
+Welcome to SQL Portfolio! This code repository code contains examples of SQL I've written.
+Feel free to look and reach out if you have any questions!
+Jesseee618@gmail.com
+
 CREATE TABLE clothing_store (id INTEGER PRIMARY KEY, item_name TEXT, item_price INTEGER, customer_name TEXT, customer_id integer);
 
 INSERT INTO clothing_store VALUES (1, "Full Zip Scuba Hoodie", 118, "Lululemon", 04012000);
