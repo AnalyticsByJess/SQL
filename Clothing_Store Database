@@ -1,0 +1,24 @@
+CREATE TABLE clothing_store (id INTEGER PRIMARY KEY, item_name TEXT, item_price INTEGER, customer_name TEXT, customer_id integer);
+
+INSERT INTO clothing_store VALUES (1, "Full Zip Scuba Hoodie", 118, "Lululemon", 04012000);
+INSERT INTO clothing_store VALUES (2, "Cinchable High Rise Jogger", 168, "Lululemon", 04012001);
+INSERT INTO clothing_store VALUES (3, "Aligned Legging", 98, "Lululemon", 04012002);
+INSERT INTO clothing_store VALUES (4, "Longlined Cloud Like Bra", 68, "Lululemon", 04012003);
+INSERT INTO clothing_store VALUES (5, "Swiftly Tech Running Long Sleeve Top", 78, "Lululemon", 04012004);
+INSERT INTO clothing_store VALUES (6, "Amazonia Feather Rib Tank", 48, "Threads4thought", 04012005);
+INSERT INTO clothing_store VALUES (7, "Neve Triblend Fleece Short",
+54, "Threads4thought", 04012006);
+INSERT INTO clothing_store VALUES (8, "Odette Triblend Crew Tee", 48, "Threads4thought", 04012007);
+INSERT INTO clothing_store VALUES (9, "Ada Triblend V-Neck Tee", 38, "Threads4thought", 04012008);
+INSERT INTO clothing_store VALUES (10, "Madge Feather Fleece Pullover Hoodie", 78, "Threads4thought", 04012009);
+INSERT INTO clothing_store VALUES (11, "Roanne Midi Dress", 398, "Bcbgmaxazria", 04012010);
+INSERT INTO clothing_store VALUES (12, "Sidney Halter Top", 178, "Bcbgmaxazria", 04012011);
+INSERT INTO clothing_store VALUES (13, "Fairfax Wide Leg Trouser", 148, "Bcbgmaxazria", 04012012);
+INSERT INTO clothing_store VALUES (14, "Ashland Cropped Jacket", 248, "Bcbgmaxazria", 04012013);
+INSERT INTO clothing_store VALUES (15, "Decker Canyon Dress", 350, "Bcbgmaxazria", 04012014);
+
+
+SELECT * FROM clothing_store ORDER BY item_price;
+
+SELECT MIN(item_price) FROM clothing_store;
+SELECT MAX(item_price) FROM clothing_store;
