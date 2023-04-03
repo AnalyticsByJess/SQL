@@ -1,10 +1,18 @@
 Jessica Kim's SQL Portfolio
 
+
 Welcome to SQL Portfolio! This code repository code contains examples of SQL I've written.
 Feel free to look and reach out if you have any questions!
 Jesseee618@gmail.com
 
+
+--Created Clothing Store database table naming what the header will be and what data type it is
+
 CREATE TABLE clothing_store (id INTEGER PRIMARY KEY, item_name TEXT, item_price INTEGER, customer_name TEXT, customer_id integer);
+
+--INSERT INTO function tells SQL to fill out the columns & rows to the clothing_store with below datas
+--Insert the data with using Quoations to let SQL know it is a TEXT,
+semicolon tells to fill out the next row, and commas to insert the data into each of the rows
 
 INSERT INTO clothing_store VALUES (1, "Full Zip Scuba Hoodie", 118, "Lululemon", 04012000);
 INSERT INTO clothing_store VALUES (2, "Cinchable High Rise Jogger", 168, "Lululemon", 04012001);
@@ -24,7 +32,14 @@ INSERT INTO clothing_store VALUES (14, "Ashland Cropped Jacket", 248, "Bcbgmaxaz
 INSERT INTO clothing_store VALUES (15, "Decker Canyon Dress", 350, "Bcbgmaxazria", 04012014);
 
 
+--Used SELECTION function to select ALL data
+--From to assign which database used
+--ORDER BY to sort the item_price by ascending order (no need to type asc, as it will generate as is, However, if desc, must write code)
+
 SELECT * FROM clothing_store ORDER BY item_price;
+
+
+--Used MIN & MAX function as aggregating data, to know which item is the lowest and highest price
 
 SELECT MIN(item_price) FROM clothing_store;
 SELECT MAX(item_price) FROM clothing_store;
