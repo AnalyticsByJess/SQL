@@ -1,0 +1,52 @@
+--Project - Data Aggregation & Explore With Marvels Characters
+
+CREATE TABLE marvels (id INTEGER PRIMARY KEY, name TEXT, rating INTEGER, gender TEXT, height_mg NUMERIC, weight_kg NUMERIC, Hometown TEXT);
+INSERT INTO marvels VALUES (1, "Iron Man", 5, "Male", 1.78, 75.75, "USA");
+INSERT INTO marvels VALUES (2, "Spider Man", 3, "Male", 1.6, 102.58, "USA");
+INSERT INTO marvels VALUES (3, "Hulk", 4, "Male", 2.44, 635.29, "USA");
+INSERT INTO marvels VALUES (4, "Gambit", 5, "Female", 1.88, 81, "EUA");
+INSERT INTO marvels VALUES (5, "Emily Frost", 5, "Female", 178, 65, "EUA");
+INSERT INTO marvels VALUES (6, "Thor", 4, "Male", 1.98, 290.18, "Asgard");
+INSERT INTO marvels VALUES (7, "Jean Grey", 3, "Female", 1.68, 52.16, "USA");
+INSERT INTO marvels VALUES (8, "Magento", 4, "Male", 1.88, 86.16, "Germany");
+INSERT INTO marvels VALUES (9, "Thanos", 3, "Male", 2.01, 446.79, "Titan");
+INSERT INTO marvels VALUES (10, "Wolverine", 5, "Male", 1.6, 88.46, "Canada");
+INSERT INTO marvels VALUES (11, "Professor X", 2, "Male", 1.83, 86, "EUA");
+INSERT INTO marvels VALUES (12, "Venon", 2, "Man", 1.90, 118, "EUA");
+INSERT INTO marvels VALUES (13, "Ghost Rider", 4, "Male", 1.88, 99, "EUA");
+INSERT INTO marvels VALUES (14, "Juggernaut", 5, "Male", 2.87, 862, "EUA");
+INSERT INTO marvels VALUES (15, "Punisher", 4, "Male", 1.93, 91, "EUA");
+
+
+SELECT name, avg(rating) AS "avg_rate" FROM marvels; 
+SELECT name, min(height_mg) AS "min_height" FROM marvels;
+SELECT name, max(weight_kg) AS "max_weight" FROM marvels WHERE Hometown = "USA";
+
+
+SELECT name, Hometown, max(weight_kg) AS "max_weight" FROM marvels GROUP BY Hometown HAVING weight_kg > 200; 
+
+
+SELECT COUNT(*), Weight_kg,
+   CASE 
+      WHEN weight_kg > 400 THEN "Overweight"
+      WHEN weight_kg > 200 THEN "Above Avegrage weight"
+      WHEN weight_kg > 100 THEN "normal weight"
+      ELSE "under weight"
+    END as "Weight_rate"
+FROM marvels
+GROUP BY weight_rate;
+
+
+SELECT COUNT(*), 
+   CASE 
+      WHEN weight_kg > 400 THEN "Overweight"
+      WHEN weight_kg > 200 THEN "Above Avegrage weight"
+      WHEN weight_kg > 100 THEN "normal weight"
+    ELSE "under weight"
+    END as "Weight_rate"
+FROM marvels
+GROUP BY weight_rate;
+
+
+SELECT name, rating FROM marvels WHERE rating = 2 OR rating = 3;
+SELECT name, hometown FROM marvels WHERE Hometown = "USA" AND gender = "Female";
