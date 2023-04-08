@@ -1,3 +1,6 @@
+--This is the project about Famous Artist using JOIN
+
+
 CREATE TABLE singers (id INTEGER PRIMARY KEY,
              album_name TEXT,
              popularity_id INTEGER,
