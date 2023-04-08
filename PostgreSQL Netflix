@@ -1,3 +1,5 @@
+--This is my project on netflix answering business questions using PostgreSQL database system
+
 -- How many movie titles are there in the database? (movies only, not tv shows)
 SELECT COUNT(*) 
 FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
