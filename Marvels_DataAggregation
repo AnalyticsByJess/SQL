@@ -1,4 +1,4 @@
---Project - Data Aggregation & Explore With Marvels Characters
+--This is the project on Data Aggregation & Explore With Marvels Characters
 
 CREATE TABLE marvels (id INTEGER PRIMARY KEY, name TEXT, rating INTEGER, gender TEXT, height_mg NUMERIC, weight_kg NUMERIC, Hometown TEXT);
 INSERT INTO marvels VALUES (1, "Iron Man", 5, "Male", 1.78, 75.75, "USA");
