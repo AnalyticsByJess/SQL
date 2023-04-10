@@ -35,4 +35,9 @@ SELECT artist_name, avg(danceability)
 FROM BIT_DB.spotifydata
 GROUP BY artist_name, track_name
 
---Second, i wanted to know 
+--Second, i wanted to know who the top 10 artist based on popularity
+SELECT artist_name, track_name, popularity
+FROM BIT_DB.spotifydata
+ORDER BY popularity desc
+LIMIT 10
+
