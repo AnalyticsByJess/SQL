@@ -21,3 +21,8 @@ ON inv.CustomerID = cust.CustomerID
 WHERE inv.BillingCountry = "Brazil";
 
 4. Show the Employees who are Sales Agents
+SELECT LastName, FirstName, Title
+FROM chinook.employees
+where Title = 'Sales Support Agent';
+
+5. Find a unique/distinct list of billing countries from the Invoice table
