@@ -1,0 +1,16 @@
+-- This is my final project from Chinook Dataset which represents a digital media store.
+-- Please let me know if you have questions!
+
+
+1. Show Customers (their full names, customer ID, and country) who are not in the US
+SELECT Firstname, Lastname, customerID, country
+FROM chinook.customers
+WHERE Country != 'USA'
+
+2. Show only the Customers from Brazil.
+SELECT Firstname, Lastname, customerID, country
+FROM chinook.customers
+WHERE Country = 'Brazil'
+
+3. Find the Invoices of customers who are from Brazil. 
+The resulting table should show the customer's full name, Invoice ID, Date of the invoice, and billing country.
